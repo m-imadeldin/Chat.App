@@ -19,9 +19,8 @@ namespace ChatClientApp
             var history = new MessageHistory();
             history.Load();
 
-            // Sätt server-URL här (ändra till er server). Exempel:
-            // http://localhost:3000/  eller  https://api.example.com/
-            const string ServerUrl = "http://localhost:3000/";
+           
+            const string ServerUrl = "wss://api.leetcode.se";
 
             var client = new ChatClient(user, history, ServerUrl);
             var handler = new CommandHandler(client, history);
